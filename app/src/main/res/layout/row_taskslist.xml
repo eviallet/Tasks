@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardCornerRadius="3dp"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:id="@+id/row_taskslist_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/row_taskslist_tasktitle"
+            android:layout_marginTop="7dp"
+            android:textSize="19sp"
+            android:textColor="@color/colorTaskName"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@id/row_taskslist_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/row_taskslist_attendee"
+            android:layout_width="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/taskslist_contact"/>
+        <ImageView
+            android:id="@+id/row_taskslist_repeat"
+            android:layout_marginTop="20dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/newtask_repeat"/>
+        <TextView
+            android:id="@+id/row_taskslist_tasktime"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorTaskTime"
+            android:layout_toEndOf="@id/row_taskslist_checkbox"
+            android:layout_below="@id/row_taskslist_tasktitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/row_taskslist_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/taskslist_content"
+            android:layout_marginStart="10dp"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="25dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@null"
+            />
+        <TextView
+            android:id="@+id/row_taskslist_category"
+            android:layout_width="110dp"
+            android:layout_height="18dp"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorTaskTime"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

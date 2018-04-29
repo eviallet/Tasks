@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tasks</string>
+
+    <string name="pref_switch">Ecran d\'accueil</string>
+    <string name="pref_calendar_day">Affichage des évènements</string>
+    <string name="pref_cat_general">Options générales</string>
+    <string name="pref_cat_calendar">Options du calendrier</string>
+</resources>

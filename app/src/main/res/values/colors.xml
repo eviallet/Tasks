@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#78909c</color>
+    <color name="colorPrimaryDark">#78909c</color>
+    <color name="colorAccent">#43a047</color>
+
+
+    <color name="colorPriorityLow">#90a4ae</color>
+    <color name="colorPriorityNormal">#42a5f5</color>
+    <color name="colorPriorityHigh">#f9a825</color>
+    <color name="colorPriorityUrgent">#e53935</color>
+
+    <color name="colorTaskName">#282828</color>
+    <color name="colorTaskTime">#666666</color>
+	
+	<color name="today">#4b82ff</color>
+	<color name="greyed_out">#c7c7c7</color>
+
+	<color name="summer">#44eebd82</color>
+	<color name="fall">#44d8d27e</color>
+	<color name="winter">#44a1c1da</color>
+	<color name="spring">#448da64b</color>
+
+    <color name="colorArrows">#2179a3</color>
+
+
+    <color name="notif_light_title">#ffffff</color>
+    <color name="notif_light_content">#e6e6e6</color>
+</resources>

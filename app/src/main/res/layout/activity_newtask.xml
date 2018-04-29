@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/newtask_pic_title"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_title" />
+    <EditText
+        android:id="@+id/newtask_name"
+        android:layout_toEndOf="@id/newtask_pic_title"
+        android:layout_width="match_parent"
+        android:inputType="textCapSentences"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="Titre"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/newtask_pic_date"
+        android:layout_below="@id/newtask_name"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_date"/>
+    <com.gueg.tasks.widgets.SpinnerDate
+        android:id="@+id/newtask_date"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:layout_toEndOf="@id/newtask_pic_date"
+        android:layout_below="@id/newtask_name"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+         />
+    <ImageView
+        android:id="@+id/newtask_pic_time"
+        android:layout_below="@id/newtask_name"
+        android:layout_toEndOf="@id/newtask_date"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_time"/>
+    <com.gueg.tasks.widgets.SpinnerTime
+        android:id="@+id/newtask_time"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/newtask_pic_time"
+        android:layout_below="@id/newtask_name"
+        android:inputType="time" />
+
+
+
+
+    <ImageView
+        android:id="@+id/newtask_pic_priority"
+        android:layout_below="@id/newtask_date"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_priority"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@id/newtask_pic_priority"
+        android:layout_below="@id/newtask_date"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="120dp"
+        android:id="@+id/newtask_radioGroup">
+
+        <RadioButton
+            android:id="@+id/newtask_priority_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPriorityLow"/>
+
+        <RadioButton
+            android:id="@+id/newtask_priority_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:buttonTint="@color/colorPriorityNormal"/>
+
+        <RadioButton
+            android:id="@+id/newtask_priority_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPriorityHigh"/>
+
+        <RadioButton
+            android:id="@+id/newtask_priority_urgent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPriorityUrgent"/>
+    </RadioGroup>
+    <ImageButton
+        android:id="@+id/newtask_reminder"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@id/newtask_radioGroup"
+        android:background="@null"
+        android:layout_below="@id/newtask_date"
+        />
+
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/newtask_pic_text"
+        android:layout_below="@id/newtask_radioGroup"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_text"/>
+    <EditText
+        android:id="@+id/newtask_text"
+        android:hint="Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newtask_radioGroup"
+        android:layout_toEndOf="@id/newtask_pic_text"
+        android:layout_marginBottom="25dp"
+        android:inputType="textMultiLine|textCapSentences"
+        android:minLines="2"
+        android:gravity="top|start"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/newtask_pic_category"
+        android:layout_below="@id/newtask_text"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_category"/>
+    <EditText
+        android:id="@+id/newtask_category"
+        android:hint="Catégorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newtask_text"
+        android:layout_toEndOf="@id/newtask_pic_text"
+        android:inputType="textMultiLine|textCapSentences"
+        android:layout_marginBottom="25dp"
+        android:gravity="top|start"
+        />
+
+
+
+    <ImageButton
+        android:id="@+id/newtask_pic_contact"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/newtask_category"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="25dp"
+        android:background="@null"/>
+    <TextView
+        android:id="@+id/newtask_attendee_name"
+        android:hint="Aucun"
+        android:maxLines="1"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:layout_toEndOf="@id/newtask_pic_contact"
+        android:layout_below="@id/newtask_category"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/newtask_attendee_email"
+        android:hint="participant"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:layout_toEndOf="@id/newtask_attendee_name"
+        android:layout_below="@id/newtask_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+    <ImageView
+        android:id="@+id/newtask_pic_repeat"
+        android:layout_below="@id/newtask_pic_contact"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/newtask_repeat"/>
+    <Spinner
+        android:id="@+id/newtask_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/newtask_pic_repeat"
+        android:layout_below="@id/newtask_pic_contact"/>
+    <Spinner
+        android:id="@+id/newtask_repeat_until"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/newtask_repeat"
+        android:layout_below="@id/newtask_pic_contact"/>
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+        <ImageButton
+            android:id="@+id/newtask_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/newtask_delete"
+            android:background="@null"
+            android:scaleType="fitXY"
+            tools:ignore="ButtonStyle" />
+        <ImageButton
+            android:id="@+id/newtask_cancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/newtask_attendee_cancel"
+            android:scaleType="fitXY"
+            tools:ignore="ButtonStyle" />
+
+        <ImageButton
+            android:id="@+id/newtask_ok"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/newtask_ok"
+            tools:ignore="ButtonStyle" />
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

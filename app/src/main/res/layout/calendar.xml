@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white">
+
+	<!-- date toolbar -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="12dp"
+		android:paddingBottom="12dp"
+		android:paddingLeft="30dp"
+		android:paddingRight="30dp">
+
+		<!-- prev button -->
+		<ImageView
+			android:id="@+id/calendar_prev_button"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:rotation="180"
+			android:layout_centerVertical="true"
+			android:layout_alignParentStart="true"
+			android:src="@drawable/calendar_arrow"/>
+
+		<!-- date title -->
+		<TextView
+			android:id="@+id/calendar_date_display"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toEndOf="@+id/calendar_prev_button"
+			android:layout_toStartOf="@+id/calendar_next_button"
+			android:gravity="center"
+			android:textAppearance="@android:style/TextAppearance.Medium"
+			android:textColor="#222222"
+			android:text="current date"
+			tools:ignore="HardcodedText"/>
+
+		<!-- next button -->
+		<ImageView
+			android:id="@+id/calendar_next_button"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:scaleType="centerInside"
+			android:layout_centerVertical="true"
+			android:layout_alignParentEnd="true"
+			android:src="@drawable/calendar_arrow"/>
+	</RelativeLayout>
+
+	<!-- days header -->
+	<LinearLayout
+		android:id="@+id/calendar_header"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="LUN"
+			tools:ignore="HardcodedText"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="MAR"
+			tools:ignore="HardcodedText"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="MER"
+			tools:ignore="HardcodedText"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="JEU"
+			tools:ignore="HardcodedText"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="VEN"
+			tools:ignore="HardcodedText"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="SAM"
+			tools:ignore="HardcodedText"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center_horizontal"
+			android:textColor="#222222"
+			android:text="DIM"
+			tools:ignore="HardcodedText" />
+	</LinearLayout>
+
+	<!-- days view -->
+	<GridView
+		android:id="@+id/calendar_grid"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:numColumns="7"/>
+</LinearLayout>

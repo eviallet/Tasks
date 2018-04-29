@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="80dp">
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/notification_small_icon"/>
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:maxLines="1"
+        android:textSize="17sp"
+        android:layout_toEndOf="@id/notification_icon"
+        android:textColor="@color/notif_light_title"/>
+    <TextView
+        android:id="@+id/notification_detail"
+        android:layout_below="@id/notification_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="19"
+        android:textSize="13sp"
+        android:maxLines="1"
+        android:textColor="@color/notif_light_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/notification_image_ok"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/notification_ok"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="8dp"
+            />
+        <ImageView
+            android:id="@+id/notification_image_later"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/notification_image_ok"
+            android:src="@drawable/notification_later"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/notification_image_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/notification_edit"
+            android:layout_toStartOf="@id/notification_image_later" />
+
+    </RelativeLayout>
+</RelativeLayout>

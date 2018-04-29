@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_cat_general">
+        <SwitchPreference
+            android:title="@string/pref_switch"
+            android:key="prefSwitch"
+            android:defaultValue="true"
+            />
+        <yuku.ambilwarna.widget.AmbilWarnaPreference
+            android:key="prefColor"
+            android:defaultValue="0xff3494E8"
+            android:title="Couleur générale" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_cat_calendar">
+        <SwitchPreference
+            android:title="@string/pref_calendar_day"
+            android:key="prefCalendarDay"
+            android:checked="true"
+            android:defaultValue="false"
+            />
+</PreferenceCategory>
+</PreferenceScreen>
